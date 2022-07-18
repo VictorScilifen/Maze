@@ -1,25 +1,48 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-
+#include <cmath>
 #include <vector>
-#include "maze_map.h"
-#include "vision.h"
+#include "config.h"
+
+class Point {
+public:
+	double x;
+	double y;
+
+	double operator*(const Point p)const
+	{
+		return this->x * p.x + this->y * p.y;
+	}
+	Point operator+(const Point p)const
+	{
+		return { this->x + p.x,this->y + y };
+	}
+	Point operator-(const Point p)const
+	{
+		return { this->x - p.x,this->y - y };
+	}
+	bool operator==(const Point p)const
+	{
+		return this->x == p.x && this->y == p.y;
+	}
+	double magnitue() {
+		return sqrt(x * x + y * y);
+	}
+};
 
 class Player {
 	Point position;
 	Point direction; // the angle player head to
-	std::vector<Point> directions;
-	std::vector<Point> around_points; // all near points in all directions
-	int** ptr_map; //player in this map
+	Point camera_axis;
 public:
-	Player(Point _position, int** _ptr_map);
+	Player(Point _position, Point _direction, Point _camera_axis);
 	void TurnLeft();
 	void TurnRight();
-	void GoForword();
-	void GoBackword();
+	void GoForword(int** map);
+	void GoBackword(int** map);
 	Point get_position();
 	Point get_direction();
-	std::vector<Point> get_visible_points();
+	Point get_cam();
 };
 
 #endif // PLAYER_H

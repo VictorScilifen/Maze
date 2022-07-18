@@ -65,9 +65,3 @@ void MazeMap::PrintMap()
 		std::cout << std::endl;
 	}
 }
-
-
-bool PointOperator::operator()(const Point& p1, const Point& p2) const
-{
-	return atan2(p1.y, p1.x) > atan2(p2.y, p2.x);
-}

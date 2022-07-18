@@ -127,11 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="collision_detection.cc" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="maze_map.cc" />
     <ClCompile Include="player.cc" />
     <ClCompile Include="renderer.cc" />
-    <ClCompile Include="vision.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collision_detection.h" />
@@ -139,7 +139,6 @@
     <ClInclude Include="maze_map.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="renderer.h" />
-    <ClInclude Include="vision.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -4,21 +4,6 @@
 #include <iostream>
 #include "config.h"
 
-class Point {
-public:
-	int x, y;
-
-	// redefine operator ==
-	bool operator==(const Point p)const {
-		return (this->x == p.x && this->y == p.y);
-	}
-};
-
-class PointOperator {
-public:
-	bool operator()(const Point& p1, const Point& p2)const;
-};
-
 
 class MazeMap {
 	int** map;

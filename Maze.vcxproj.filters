@@ -21,13 +21,13 @@
     <ClCompile Include="maze_map.cc">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="vision.cc">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="player.cc">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="renderer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="collision_detection.cc">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -36,9 +36,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="config.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="vision.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="collision_detection.h">

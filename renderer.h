@@ -2,11 +2,13 @@
 #define RENDERER_H
 
 #include <graphics.h>
-#include <vector>
-#include "maze_map.h"
+#include "player.h"
+#include "config.h"
 
 void InitRenderer();
-void Render2DWalls(Point player_position, Point player_direction, std::vector<Point> visible_points);
-int EuclidDistance(Point _start, Point _end);
+void RenderCeiling();
+void RenderFloor();
+void Render2DWalls(Player player, int** world);
+
 
 #endif // RENDERER_H
