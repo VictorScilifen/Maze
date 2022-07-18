@@ -1,0 +1,15 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define MAZE_SIZE 50
+
+#define PLAYER_FIELD 15
+
+#define HORIZON_HEIGHT 250
+
+#define WALL_COLOR RED
+#define WINDOW_WIDTH 960
+#define WINDOW_HEIGHT 540
+#define GAME_NEGATIVE_SPACE_HEIGHT 50
+
+#endif // CONFIG_H
